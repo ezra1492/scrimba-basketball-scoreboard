@@ -24,65 +24,53 @@
     <title>Basketball Scoreboard</title>
   </head>
 
-  <body class="team-card">
+  <body>
     <h1 hidden></h1>
     <!-- for readability all web pages must have an h1 tag -->
-    <main class="team-card__board">
+    <main class="scoreborad">
       <!-- main holds both HOME and GUEST cards -->
-      <article class="team-card__home">
+      <article class="scoreborad__team-card">
         <!-- each card lays within an article tag, and branches into title, score and buttons -->
-        <h2 class="team-card__title">HOME</h2>
+        <h2 class="scoreboard__title">HOME</h2>
 
-        <section aria-label="Home team current score">
-          <data id="team-card__home-score" value="0">0</data>
+        <section
+          class="scoreborad__dispaly"
+          aria-label="Home team current score"
+        >
+          <data id="scoreborad__home-score" value="0">0</data>
         </section>
 
-        <section class="team-card__buttons">
-          <button
-            class="team-card__one-point"
-            aria-label="Home team gets 1 pont"
-          >
+        <section class="scoreborad__buttons">
+          <button class="scoreborad__btn" aria-label="Home team gets 1 pont">
             +1
           </button>
-          <button
-            class="team-card__two-point"
-            aria-label="Home team gets 2 ponts"
-          >
+          <button class="scoreborad__btn" aria-label="Home team gets 2 ponts">
             +2
           </button>
-          <button
-            class="team-card__three-point"
-            aria-label="Home team gets 3 ponts"
-          >
+          <button class="scoreborad__btn" aria-label="Home team gets 3 ponts">
             +3
           </button>
         </section>
       </article>
 
-      <article class="team-card__guest">
-        <h2 class="team-card__title">GUEST</h2>
+      <article class="scoreborad">
+        <h2 class="scoreborad__title">GUEST</h2>
 
-        <section aria-label="Guest team current score">
-          <data id="team-card__guest-score" value="0">0</data>
+        <section
+          class="scoreborad__display"
+          aria-label="Guest team current score"
+        >
+          <data id="scoreborad__guest-score" value="0">0</data>
         </section>
 
-        <section class="team-card__buttons">
-          <button
-            class="team-card__one-point"
-            aria-label="Guest team gets 1 pont"
-          >
+        <section class="scoreborad__buttons">
+          <button class="scoreborad__btn" aria-label="Guest team adds 1 pont">
             +1
           </button>
-          <button
-            class="team-card__two-point"
-            aria-label="Guest team gets 2 pont"
-          >
+          <button class="scoreborad__btn" aria-label="Guest team adds 2 pont">
             +2
           </button>
-          <button
-            class="team-card__three-point"
-            aria-label="Guest team gets 3 pont"
-          >
+          <button class="scoreborad__btn" aria-label="Guest team adds 3 pont">
             +3
           </button>
         </section>
