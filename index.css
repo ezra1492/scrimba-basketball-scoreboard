@@ -31,7 +31,9 @@ BOX-RESET & DESIGN TOKENS ↓
 
   /* width tokens */
   --wd: 9.6875rem;
-  --gap-small: 0.625rem;
+
+  /* Gap tokens */
+  --gap: 0.625rem;
 
   /* Family font tokens*/
   --ff-title: "Black Ops One", system-ui;
@@ -60,6 +62,7 @@ body {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  gap: var(--gap); /* acts like a buffer in between both score-cards */
   background: red;
 }
 
@@ -81,13 +84,13 @@ body {
 .score-card__display {
   background: var(--clr-black);
   color: var(--clr-red);
-  width: 9.6875rem;
+  width: var(--wd);
   height: 7.5rem;
   margin: 1.3125rem 0 1.625rem 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding-top: 0.8rem; /* balances out the babeline height */
+  padding-top: 0.8rem; /* balances out the baseline height */
   font-size: var(--fs-b);
   font-family: var(--ff-score);
   border-radius: var(--br-general);
@@ -110,3 +113,17 @@ body {
   border: 0.125rem solid var(--clr-s-grey);
   border-radius: var(--br-general);
 }
+
+/* ======================
+RESPONSIVE CHOREOGRAPHY ↓
+========================= */
+@media (max-width: 450px) {
+  .scoreboard {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+/* ======================
+RESPONSIVE CHOREOGRAPHY ↑
+========================= */
