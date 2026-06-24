@@ -5,7 +5,6 @@ STATE MANAGEMENT & UI ANCHORS ↓
 // ANCHOR: Selecting the display element from the DOM.
 let homeScore = document.getElementById("score-card__home-score");
 
-//
 let homeScoreCount = 0;
 
 /* ==========================
@@ -33,16 +32,27 @@ function addThreeHome() {
 HOME TEAM INTERACTION LOGIC ↑
 ============================= */
 
-// GUEST BUTTONS ↓
+let guestScoreEl = document.getElementById("score-card__guest-score");
+// ANCHOR: Reference to the DOM element used to synchronize the UI with the internal state variable.
+let guestScoreCount = 0;
+
+/* ===========================
+GUEST TEAM INTERACTION LOGIC ↓
+============================== */
 function addOneGuest() {
-  console.log("+1 Guest");
+  guestScoreCount += 1;
+  guestScoreEl.textContent = guestScoreCount;
 }
 
 function addTwoGuest() {
-  console.log("+2 Guest");
+  guestScoreCount += 2;
+  guestScoreEl.textContent = guestScoreCount;
 }
 
 function addThreeGuest() {
-  console.log("+3 Guest");
+  guestScoreCount += 3;
+  guestScoreEl.textContent = guestScoreCount;
 }
-// GUEST BUTTONS ↑
+/* ===========================
+GUEST TEAM INTERACTION LOGIC ↑
+============================== */

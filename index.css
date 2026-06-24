@@ -110,6 +110,13 @@ body {
   border-radius: var(--br-general);
 }
 
+.score-card__btn:hover,
+.score-card__btn:focus-visible {
+  cursor: pointer;
+  color: var(--clr-red);
+  transition: color 0.6s ease;
+}
+
 /* ======================
 RESPONSIVE CHOREOGRAPHY ↓
 ========================= */
