@@ -4,9 +4,9 @@
 
   <head>
     <meta charset="UTF-8" />
-    <!-- loads of characters -->
+    <!-- global symbol support -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- proper display size based on user's device -->
+    <!-- responsive viewport scaling for mobile-first consistency -->
 
     <link rel="stylesheet" href="index.css" />
     <!-- link's the HTML doc with CSS -->
@@ -26,51 +26,53 @@
 
   <body>
     <h1 hidden></h1>
-    <!-- for readability all web pages must have an h1 tag -->
-    <main class="scoreborad">
+    <!-- semantic landmark for screen readers (SEO/A11y) -->
+    <main class="scoreboard">
       <!-- main holds both HOME and GUEST cards -->
-      <article class="scoreborad__team-card">
-        <!-- each card lays within an article tag, and branches into title, score and buttons -->
-        <h2 class="scoreboard__title">HOME</h2>
+      <!-- TEAM CARD COMPONENT ↓ -->
+      <article class="score-card">
+        <!-- each card lays within an article tag, and branches into title, display and buttons -->
+        <h2 class="score-card__title">HOME</h2>
 
         <section
-          class="scoreborad__dispaly"
+          class="score-card__display"
           aria-label="Home team current score"
         >
-          <data id="scoreborad__home-score" value="0">0</data>
+          <data id="score-card__home-score" value="0">0</data>
         </section>
 
-        <section class="scoreborad__buttons">
-          <button class="scoreborad__btn" aria-label="Home team gets 1 pont">
+        <section class="score-card__buttons">
+          <button class="score-card__btn" aria-label="Home team gets 1 pont">
             +1
           </button>
-          <button class="scoreborad__btn" aria-label="Home team gets 2 ponts">
+          <button class="score-card__btn" aria-label="Home team gets 2 ponts">
             +2
           </button>
-          <button class="scoreborad__btn" aria-label="Home team gets 3 ponts">
+          <button class="score-card__btn" aria-label="Home team gets 3 ponts">
             +3
           </button>
         </section>
       </article>
+      <!-- TEAM CARD COMPONENT ↑ -->
 
-      <article class="scoreborad">
-        <h2 class="scoreborad__title">GUEST</h2>
+      <article class="score-card">
+        <h2 class="score-card__title">GUEST</h2>
 
         <section
-          class="scoreborad__display"
+          class="score-card__display"
           aria-label="Guest team current score"
         >
-          <data id="scoreborad__guest-score" value="0">0</data>
+          <data id="score-card__guest-score" value="0">0</data>
         </section>
 
-        <section class="scoreborad__buttons">
-          <button class="scoreborad__btn" aria-label="Guest team adds 1 pont">
+        <section class="score-card__buttons">
+          <button class="score-card__btn" aria-label="Guest team adds 1 pont">
             +1
           </button>
-          <button class="scoreborad__btn" aria-label="Guest team adds 2 pont">
+          <button class="score-card__btn" aria-label="Guest team adds 2 pont">
             +2
           </button>
-          <button class="scoreborad__btn" aria-label="Guest team adds 3 pont">
+          <button class="score-card__btn" aria-label="Guest team adds 3 pont">
             +3
           </button>
         </section>

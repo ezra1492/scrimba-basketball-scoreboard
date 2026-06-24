@@ -1,0 +1,112 @@
+/* ========================
+BOX-RESET & DESIGN TOKENS ↓
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color toneks */
+  --clr-black: #080001;
+  --clr-grey: #1f2937;
+  --clr-s-grey: #9ca3af;
+  --clr-white: #f3f4f6;
+  --clr-red: #f94f6d;
+
+  /* Font size tokens */
+  --fs-b: 5.625rem;
+  --fs-m: 2.5rem;
+  --fs-s: 1.125rem;
+
+  /* Font weight tokens */
+  --fw-bold: 600;
+  --fw-regular: 500;
+
+  /* Border radius token */
+  --br-general: 0.3125rem;
+
+  /* width tokens */
+  --wd: 9.6875rem;
+  --gap-small: 0.625rem;
+
+  /* Family font tokens*/
+  --ff-title: "Black Ops One", system-ui;
+  --ff-score: "Cursed Timer ULiL";
+}
+
+@font-face {
+  font-family: "Cursed Timer ULiL";
+  src: url(./font/CursedTimerUlil-Aznm.ttf);
+  font-display: swap; /* shows a system font while this is still loading*/
+}
+
+/* ========================
+BOX-RESET & DESIGN TOKENS ↑
+=========================== */
+
+body {
+  background: var(--clr-grey);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background: red;
+}
+
+.score-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4px solid blue;
+}
+
+.score-card__title {
+  color: var(--clr-white);
+  font-family: var(--ff-title);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-m);
+  background: chocolate;
+}
+
+.score-card__display {
+  background: var(--clr-black);
+  color: var(--clr-red);
+  width: 9.6875rem;
+  height: 7.5rem;
+  margin: 1.3125rem 0 1.625rem 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.8rem; /* balances out the babeline height */
+  font-size: var(--fs-b);
+  font-family: var(--ff-score);
+  border-radius: var(--br-general);
+}
+
+.score-card__buttons {
+  padding-top: 0rem;
+  width: var(--wd);
+  display: flex;
+  justify-content: space-between;
+  background: pink;
+}
+
+.score-card__btn {
+  background: var(--clr-grey);
+  color: var(--clr-s-grey);
+  font-family: var(--ff-score);
+  font-size: var(--fs-s);
+  padding: 0.625rem 0.5rem;
+  border: 0.125rem solid var(--clr-s-grey);
+  border-radius: var(--br-general);
+}
