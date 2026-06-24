@@ -1,16 +1,94 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="container">
-            <div>
-                <h3>HOME</h3>
-            </div>
-            <div>
-                <h3>GUEST</h3>
-            </div>
-        </div>
-        <script src="index.js"></script>
-    </body>
+<!doctype html>
+<html lang="en">
+  <!-- web page language -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- loads of characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- proper display size based on user's device -->
+
+    <link rel="stylesheet" href="index.css" />
+    <!-- link's the HTML doc with CSS -->
+
+    <link rel="icon" type="image/svg" sizes="32x32" href="./images/ball.svg" />
+    <!-- basketball icon for the title from https://emojiterra.com/basketball/ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- title font -->
+    <title>Basketball Scoreboard</title>
+  </head>
+
+  <body class="team-card">
+    <h1 hidden></h1>
+    <!-- for readability all web pages must have an h1 tag -->
+    <main class="team-card__board">
+      <!-- main holds both HOME and GUEST cards -->
+      <article class="team-card__home">
+        <!-- each card lays within an article tag, and branches into title, score and buttons -->
+        <h2 class="team-card__title">HOME</h2>
+
+        <section aria-label="Home team current score">
+          <data id="team-card__home-score" value="0">0</data>
+        </section>
+
+        <section class="team-card__buttons">
+          <button
+            class="team-card__one-point"
+            aria-label="Home team gets 1 pont"
+          >
+            +1
+          </button>
+          <button
+            class="team-card__two-point"
+            aria-label="Home team gets 2 ponts"
+          >
+            +2
+          </button>
+          <button
+            class="team-card__three-point"
+            aria-label="Home team gets 3 ponts"
+          >
+            +3
+          </button>
+        </section>
+      </article>
+
+      <article class="team-card__guest">
+        <h2 class="team-card__title">GUEST</h2>
+
+        <section aria-label="Guest team current score">
+          <data id="team-card__guest-score" value="0">0</data>
+        </section>
+
+        <section class="team-card__buttons">
+          <button
+            class="team-card__one-point"
+            aria-label="Guest team gets 1 pont"
+          >
+            +1
+          </button>
+          <button
+            class="team-card__two-point"
+            aria-label="Guest team gets 2 pont"
+          >
+            +2
+          </button>
+          <button
+            class="team-card__three-point"
+            aria-label="Guest team gets 3 pont"
+          >
+            +3
+          </button>
+        </section>
+      </article>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
 </html>
