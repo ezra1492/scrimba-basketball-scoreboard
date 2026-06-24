@@ -34,6 +34,7 @@
         <!-- each card lays within an article tag, and branches into title, display and buttons -->
         <h2 class="score-card__title">HOME</h2>
 
+        <!-- INTERACTIVE COMPONENT ↓ -->
         <section
           class="score-card__display"
           aria-label="Home team current score"
@@ -42,17 +43,30 @@
         </section>
 
         <section class="score-card__buttons">
-          <button class="score-card__btn" aria-label="Home team gets 1 pont">
+          <button
+            onclick="addOneHome()"
+            class="score-card__btn"
+            aria-label="Home team gets 1 pont"
+          >
             +1
           </button>
-          <button class="score-card__btn" aria-label="Home team gets 2 ponts">
+          <button
+            onclick="addTwoHome()"
+            class="score-card__btn"
+            aria-label="Home team gets 2 ponts"
+          >
             +2
           </button>
-          <button class="score-card__btn" aria-label="Home team gets 3 ponts">
+          <button
+            onclick="addThreeHome()"
+            class="score-card__btn"
+            aria-label="Home team gets 3 ponts"
+          >
             +3
           </button>
         </section>
       </article>
+      <!-- INTERACTIVE COMPONENT ↑ -->
       <!-- TEAM CARD COMPONENT ↑ -->
 
       <article class="score-card">
@@ -66,13 +80,25 @@
         </section>
 
         <section class="score-card__buttons">
-          <button class="score-card__btn" aria-label="Guest team adds 1 pont">
+          <button
+            onclick="addOneGuest()"
+            class="score-card__btn"
+            aria-label="Guest team adds 1 pont"
+          >
             +1
           </button>
-          <button class="score-card__btn" aria-label="Guest team adds 2 pont">
+          <button
+            onclick="addTwoGuest()"
+            class="score-card__btn"
+            aria-label="Guest team adds 2 pont"
+          >
             +2
           </button>
-          <button class="score-card__btn" aria-label="Guest team adds 3 pont">
+          <button
+            onclick="addThreeGuest()"
+            class="score-card__btn"
+            aria-label="Guest team adds 3 pont"
+          >
             +3
           </button>
         </section>
@@ -80,5 +106,6 @@
     </main>
 
     <script src="index.js"></script>
+    <!-- just like the link in line 11 connects the HTML doc with CSS, this script links the document with JS -->
   </body>
 </html>
