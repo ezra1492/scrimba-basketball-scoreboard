@@ -1,16 +1,41 @@
-// HOME BUTTONS ↓
+/* ============================
+STATE MANAGEMENT & UI ANCHORS ↓
+=============================== */
+
+// ANCHOR: Selecting the display element from the DOM
+let homeScore = document.getElementById("score-card__home-score");
+console.log(homeScore);
+
+// LOGIC FLAW: Using multiple "state buckets" instead of a Single Source of Truth.
+// These variables track points independently, which is the root of the UI reset bug
+let addOne = 0;
+let addTwo = 0;
+let addThree = 0;
+
+/* ==========================
+HOME TEAM INTERACTION LOGIC ↓
+============================= */
+
+// FUNCTION: addOneHome()
+// HOW IT WORKS: Increments the 'addOne' variable and pushes it to the DOM.
+// WHY IT FAILS: It ignores 'addTwo'and 'addThree'. When called it overwrites the scoreboard with its own total, reseting any progress made by other buttons.
 function addOneHome() {
-  console.log("+1 home");
+  addOne += 1;
+  homeScore.textContent = addOne;
 }
 
 function addTwoHome() {
-  console.log("+2 home");
+  addTwo += 2;
+  homeScore.textContent = addTwo;
 }
 
 function addThreeHome() {
-  console.log("+3 home");
+  addThree += 3;
+  homeScore.textContent = addThree;
 }
-// HOME BUTTONS ↑
+/* ==========================
+HOME TEAM INTERACTION LOGIC ↑
+============================= */
 
 // GUEST BUTTONS ↓
 function addOneGuest() {
