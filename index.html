@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <!-- web page language -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- global symbol support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- responsive viewport scaling for mobile-first consistency -->
+
+    <!-- link's the HTML doc with CSS -->
+
+    <link rel="icon" type="image/svg" sizes="32x32" href="/scrimba-basketball-scoreboard/assets/ball-ChYlyhXT.svg" />
+    <!-- basketball icon for the title from https://emojiterra.com/basketball/ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- title font -->
+    <title>Basketball Scoreboard</title>
+    <link rel="stylesheet" crossorigin href="/scrimba-basketball-scoreboard/assets/index-BUs3oZ6_.css">
+  </head>
+
+  <body>
+    <h1 hidden>Basketball Scoreboard</h1>
+    <!-- semantic landmark for screen readers (SEO/A11y) -->
+    <main class="scoreboard">
+      <!-- main holds both HOME and GUEST cards -->
+      <!-- TEAM CARD COMPONENT ↓ -->
+      <article class="score-card">
+        <!-- each card lays within an article tag, and branches into title, display and buttons -->
+        <h2 class="score-card__title">HOME</h2>
+
+        <!-- INTERACTIVE COMPONENT ↓ -->
+        <section
+          class="score-card__display"
+          aria-label="Home team current score"
+        >
+          <data id="score-card__home-score" value="0">0</data>
+        </section>
+
+        <section class="score-card__buttons">
+          <button
+            onclick="addOneHome()"
+            class="score-card__btn"
+            aria-label="Home team gets 1 point"
+          >
+            +1
+          </button>
+          <button
+            onclick="addTwoHome()"
+            class="score-card__btn"
+            aria-label="Home team gets 2 points"
+          >
+            +2
+          </button>
+          <button
+            onclick="addThreeHome()"
+            class="score-card__btn"
+            aria-label="Home team gets 3 points"
+          >
+            +3
+          </button>
+        </section>
+      </article>
+      <!-- INTERACTIVE COMPONENT ↑ -->
+      <!-- TEAM CARD COMPONENT ↑ -->
+
+      <article class="score-card">
+        <h2 class="score-card__title">GUEST</h2>
+
+        <section
+          class="score-card__display"
+          aria-label="Guest team current score"
+        >
+          <data id="score-card__guest-score" value="0">0</data>
+        </section>
+
+        <section class="score-card__buttons">
+          <button
+            onclick="addOneGuest()"
+            class="score-card__btn"
+            aria-label="Guest team adds 1 point"
+          >
+            +1
+          </button>
+          <button
+            onclick="addTwoGuest()"
+            class="score-card__btn"
+            aria-label="Guest team adds 2 points"
+          >
+            +2
+          </button>
+          <button
+            onclick="addThreeGuest()"
+            class="score-card__btn"
+            aria-label="Guest team adds 3 points"
+          >
+            +3
+          </button>
+        </section>
+      </article>
+    </main>
+
+    <script src="index.js"></script>
+    <!-- just like the link in line 11 connects the HTML doc with CSS, this script links the document with JS -->
+  </body>
+</html>
