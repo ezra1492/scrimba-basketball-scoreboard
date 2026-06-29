@@ -9,21 +9,57 @@
       sizes="32x32"
       href="./images/warning.svg"
     />
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Redirect Notice</title>
   </head>
   <body>
-    <h1>Redirect Notice</h1>
+    <h1 class="notice">Redirect Notice</h1>
     <main>
-      <p>You are leaving the Basketball Scoreboard to visit:</p>
+      <p class="notice__paragraph">
+        You are leaving the
+        <span class="notice__scoreboard">Basketball Scoreboard</span> to visit:
+      </p>
 
-      <ul>
+      <ul class="notice__list">
         <li>
-          <a href="https://scrimba.com/fullstack-path-c0fullstack/~05h"
+          <a
+            class="notice__anchor"
+            aria-label="#"
+            href="https://scrimba.com/fullstack-path-c0fullstack/~05h"
             >Scrimba: Solo Project - Basketball Scoreboard</a
           >
         </li>
-        <li><a href="https://github.com/ezra1492">Ray - GitHub</a></li>
+        <li>
+          <a
+            class="notice__anchor"
+            aria-label="#"
+            href="https://github.com/ezra1492"
+            >Ray - GitHub</a
+          >
+        </li>
       </ul>
+
+      <span></span
+      ><a
+        class="notice__anchor"
+        aria-label="#"
+        href="https://ezra1492.github.io/scrimba-basketball-scoreboard/"
+        >Go back to the
+        <span class="notice__scoreboard">Basketball Scoreboard</span></a
+      >
+      <img
+        class="notice__img"
+        src="./images/basket-girl.svg"
+        alt="Emoji person running while bouncing a basketball"
+      />
     </main>
   </body>
 </html>

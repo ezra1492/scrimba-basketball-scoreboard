@@ -76,5 +76,5 @@ Closing the **"Accessibility Gap"** was a priority. I integrated hidden semantic
 
 ## Author
 
-- **Website:** [Israel (Ray) Guevara GitHub](https://github.com/ezra1492)
+- **Website:** [Israel (Ray) Guevara GitHub](#)
 - **Frontend Mentor:** [@ezra1492](https://www.frontendmentor.io/profile/ezra1492)

@@ -16,6 +16,7 @@ BOX-RESET & DESIGN TOKENS ↓
   --clr-s-grey: #9ca3af;
   --clr-white: #f3f4f6;
   --clr-red: #f94f6d;
+  --clr-purple: #5e18f7;
 
   /* Font size tokens */
   --fs-b: 5.625rem;
@@ -59,11 +60,8 @@ body {
   justify-content: center;
 }
 
-main {
-  margin: auto 0;
-}
-
 .scoreboard {
+  margin: auto 0;
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -162,3 +160,57 @@ CREDITS ↓
 /* =======
 CREDITS ↑
 ========== */
+
+/* =================
+REDIRECTION NOTICE ↓
+==================== */
+
+.notice {
+  font-family: var(--ff-title);
+  color: var(--clr-white);
+  text-shadow: 0.1875rem 0.1875rem 0.1875rem var(--clr-black);
+  margin: 1.5rem;
+}
+
+.notice__paragraph {
+  font-family: var(--ff-title);
+  color: var(--clr-white);
+  text-shadow: 1px 1px 1px var(--clr-black);
+  margin-bottom: 1.2rem;
+}
+
+.notice__list {
+  list-style: none;
+  padding: 0;
+}
+
+.notice__list li {
+  background-image: url("./images/ball.svg");
+  background-repeat: no-repeat;
+  background-size: 1.2rem; /* AJUSTA AQUÍ EL TAMAÑO (ej: 1rem o 15px) */
+  background-position: 0 center;
+  padding-left: 2rem; /* Espacio para que el texto no pise el balón */
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.notice__anchor {
+  font-family: var(--ff-title);
+  /* text-decoration: none; */
+  color: var(--clr-s-grey);
+}
+
+.notice__scoreboard {
+  color: var(--clr-red);
+}
+
+.notice__img {
+  height: 2.5rem;
+  width: auto;
+}
+
+.notice__anchor:hover,
+.notice__anchor:focus-visible {
+  text-shadow: 1px 1px 1px var(--clr-black);
+}
